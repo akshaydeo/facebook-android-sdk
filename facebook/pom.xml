@@ -6,7 +6,7 @@
 
     <groupId>com.facebook</groupId>
     <artifactId>android-sdk</artifactId>
-    <version>0.2</version>
+    <version>3</version>
     <packaging>apklib</packaging>
 
 
