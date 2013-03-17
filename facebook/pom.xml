@@ -24,11 +24,11 @@
             <version>${android.version}</version>
             <scope>provided</scope>
         </dependency>
-	<dependency>
-	    <groupId>com.google.android</groupId>
-	    <artifactId>support-v4</artifactId>
-	    <version>r7</version>	    
-	</dependency>
+        <dependency>
+            <groupId>android.support</groupId>
+            <artifactId>compatibility-v4</artifactId>
+            <version>11</version>           
+        </dependency>
         <dependency>
             <groupId>com.googlecode.androidannotations</groupId>
             <artifactId>androidannotations</artifactId>
