@@ -590,14 +590,15 @@ class AuthorizationClient implements Serializable {
                 // Handle stuff
                 Result outcome = null;
 
-                if (resultCode == Activity.RESULT_CANCELED) {
+                if (resultCode == Activity.RESULT_CANCELED && data != null) {
                     outcome = Result.createCancelResult(
                             data.getStringExtra(NativeProtocol.STATUS_ERROR_DESCRIPTION));
                 } else if (resultCode != Activity.RESULT_OK) {
                     outcome = Result
                             .createErrorResult("Unexpected resultCode from authorization.", null);
                 } else {
-                    outcome = handleResultOk(data);
+                    if(data != null)
+                       outcome = handleResultOk(data);
                 }
 
                 if (outcome != null) {
